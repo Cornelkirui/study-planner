@@ -10,47 +10,26 @@
 </head>
 <body>
 
-  <div id="app-container" class="container">
-
+  <div class="container" id="app-container">
     <h1 id="app-title" class="title">Study Planner App</h1>
 
     <form id="task-form" class="task-form">
 
-      <!-- task title -->
-      <input 
-        type="text" 
-        id="task-title" 
-        class="task-input" 
-        placeholder="Enter task title" 
-        required
-      >
+      <input type="text" id="task-title" class="task-input" placeholder="Enter task title" required>
 
-      <!-- task priority -->
+      <!-- select for task priority -->
       <select id="task-priority" class="task-select">
         <option value="High">High</option>
         <option value="Medium">Medium</option>
         <option value="Low">Low</option>
       </select>
 
-      <!-- task deadline -->
-      <input 
-        type="date" 
-        id="task-deadline" 
-        class="task-date"
-      >
+      <input type="date" id="task-deadline" class="task-date">
 
-      <!-- add task button -->
-      <button 
-        type="submit" 
-        id="add-task-btn" 
-        class="task-btn"
-      >
-        Add Task
-      </button>
+      <button type="submit" id="add-task-btn" class="task-btn">Add Task</button>
 
     </form>
 
-    <!-- task list -->
     <ul id="task-list" class="task-list">
 
       <li id="task-1" class="task-item">
@@ -60,6 +39,7 @@
         <span class="task-deadline">2026-04-10</span>
         <span class="task-status">Incomplete</span>
 
+        <button class="edit-btn">Edit</button> <!-- ✅ ADDED -->
         <button class="complete-btn">Complete</button>
         <button class="delete-btn">Delete</button>
 

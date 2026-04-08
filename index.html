@@ -1,56 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Planner App</title>
+<div id="app-container">
 
-  <!-- CSS link -->
-  <!-- <link rel="stylesheet" href="style.css"> -->
-</head>
-<body>
+  <h1>Study Planner</h1>
 
-  <div class="container" id="app-container">
-    <h1 id="app-title" class="title">Study Planner App</h1>
+  <!-- Add Task Section -->
+  <form id="task-form">
+    <input type="text" id="task-title" placeholder="Task Title" required>
+    
+    <select id="task-priority">
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low">Low</option>
+    </select>
 
-    <form id="task-form" class="task-form">
+    <input type="date" id="task-deadline">
 
-      <input type="text" id="task-title" class="task-input" placeholder="Enter task title" required>
+    <button type="submit">Add Task</button>
+  </form>
 
-      <!-- select for task priority -->
-      <select id="task-priority" class="task-select">
-        <option value="High">High</option>
-        <option value="Medium">Medium</option>
-        <option value="Low">Low</option>
-      </select>
+  <!-- Upcoming Tasks -->
+  <h2>Upcoming Tasks</h2>
 
-      <input type="date" id="task-deadline" class="task-date">
+  <table id="task-table">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Priority</th>
+        <th>Due Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
 
-      <button type="submit" id="add-task-btn" class="task-btn">Add Task</button>
+    <tbody id="task-body">
+      <!-- JS will add tasks here -->
+      <tr>
+        <td>Revise JavaScript</td>
+        <td>High</td>
+        <td>2026-04-10</td>
+        <td>
+          <button class="edit-btn">Edit</button>
+          <button class="complete-btn">Complete</button>
+          <button class="delete-btn">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-    </form>
+  <!-- Completed Tasks -->
+  <h2>Completed Tasks</h2>
 
-    <ul id="task-list" class="task-list">
+  <table id="completed-table">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
 
-      <li id="task-1" class="task-item">
+    <tbody id="completed-body">
+      <tr>
+        <td>Finish HTML Assignment</td>
+        <td>Completed</td>
+        <td>
+          <button class="delete-btn">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-        <span class="task-title">Study JavaScript</span>
-        <span class="task-priority">High</span>
-        <span class="task-deadline">2026-04-10</span>
-        <span class="task-status">Incomplete</span>
-
-        <button class="edit-btn">Edit</button> <!-- ✅ ADDED -->
-        <button class="complete-btn">Complete</button>
-        <button class="delete-btn">Delete</button>
-
-      </li>
-
-    </ul>
-
-  </div>
-
-  <!-- JS link -->
-  <!-- <script src="index.js"></script> -->
-
-</body>
-</html>
+</div>

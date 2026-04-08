@@ -4,34 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Study Planner App</title>
+
   <!-- CSS link -->
   <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
 
-<div class="container" id="app-container">
+  <div id="app-container" class="container">
 
-  <h1 id="app-title" class="title">Study Planner App</h1>
+    <h1 id="app-title" class="title">Study Planner App</h1>
 
-  <form id="task-form" class="task-form">
+    <form id="task-form" class="task-form">
 
-    <input type="text" id="task-title" class="task-input" placeholder="Enter task title" required>
+      <!-- task title -->
+      <input 
+        type="text" 
+        id="task-title" 
+        class="task-input" 
+        placeholder="Enter task title" 
+        required
+      >
 
-    <select id="task-priority" class="task-select">
-      <option value="High">High</option>
-      <option value="Medium">Medium</option>
-      <option value="Low">Low</option>
-    </select>
+      <!-- task priority -->
+      <select id="task-priority" class="task-select">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
 
-    <input type="date" id="task-deadline" class="task-date">
+      <!-- task deadline -->
+      <input 
+        type="date" 
+        id="task-deadline" 
+        class="task-date"
+      >
 
-    <button type="submit" id="add-task-btn" class="task-btn">Add Task</button>
+      <!-- add task button -->
+      <button 
+        type="submit" 
+        id="add-task-btn" 
+        class="task-btn"
+      >
+        Add Task
+      </button>
 
-  </form>
+    </form>
 
-  <ul id="task-list" class="task-list">
+    <!-- task list -->
+    <ul id="task-list" class="task-list">
 
-</div>
+      <li id="task-1" class="task-item">
+
+        <span class="task-title">Study JavaScript</span>
+        <span class="task-priority">High</span>
+        <span class="task-deadline">2026-04-10</span>
+        <span class="task-status">Incomplete</span>
+
+        <button class="complete-btn">Complete</button>
+        <button class="delete-btn">Delete</button>
+
+      </li>
+
+    </ul>
+
+  </div>
+
+  <!-- JS link -->
+  <!-- <script src="index.js"></script> -->
 
 </body>
 </html>
